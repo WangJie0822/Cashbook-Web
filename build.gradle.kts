@@ -8,7 +8,7 @@ plugins {
 	kotlin("plugin.spring") version "1.9.22"
 }
 
-group = "cn.wj.spring"
+group = "cn.wj.spring.cashbook"
 version = "0.0.1-SNAPSHOT"
 
 java {
@@ -20,10 +20,12 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
-	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("com.alicp.jetcache:jetcache-starter-redis:2.7.5")
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+	implementation("org.apache.httpcomponents.client5:httpclient5-fluent")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
